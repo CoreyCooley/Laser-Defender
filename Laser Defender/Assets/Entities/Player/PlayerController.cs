@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public float firingRate = 0.2f;
     public float xPadding = 0.5f;
     public float yPadding = 0.5f;
+    public float health = 500f;
 
     // Private Variables
     private float xMin = -5.0f;
@@ -70,9 +71,28 @@ public class PlayerController : MonoBehaviour {
         transform.position = new Vector3(newX, newY, transform.position.z);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Laser laser = collision.gameObject.GetComponent<Laser>();
+        if (laser)
+        {
+            health -= laser.GetDamage();
+            laser.Hit();
+            if (health <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Debug.Log("Hit by a unknown");
+        }
+    }
+
     void Fire()
-    {         
-        GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
+    {
+        Vector3 startPosition = transform.position + new Vector3(0, 1, 0);
+        GameObject laser = Instantiate(laserPrefab, startPosition, Quaternion.identity) as GameObject;
 
         laser.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, laserSpeed, 0);
     }
