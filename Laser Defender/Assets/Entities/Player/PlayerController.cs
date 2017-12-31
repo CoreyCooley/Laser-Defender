@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour {
     public float yPadding = 0.5f;
     public float health = 500f;
     public AudioClip fireSound;
+    public AudioClip deathSound;
 
     // Private Variables
     private float xMin = -5.0f;
@@ -81,6 +82,7 @@ public class PlayerController : MonoBehaviour {
             laser.Hit();
             if (health <= 0)
             {
+                AudioSource.PlayClipAtPoint(deathSound, transform.position);
                 Destroy(gameObject);
             }
         }
