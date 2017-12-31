@@ -15,7 +15,7 @@ Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defen
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.031 seconds
+- Completed reload, in  0.161 seconds
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
@@ -23,11 +23,17 @@ desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.573744 ms
-Quit requested
+UnloadTime: 1.984822 ms
+New Level load: Game
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 7.207800 ms
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 294.
+Total: 0.208000 ms (FindLiveObjects: 0.040205 ms CreateObjectMapping: 0.030358 ms MarkObjects: 0.126359 ms  DeleteObjects: 0.009846 ms)
+
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2edc -> priority: 1 
-  Thread -> id: 27bc -> priority: 1 
+  Thread -> id: 3180 -> priority: 1 
+  Thread -> id: bb4 -> priority: 1 

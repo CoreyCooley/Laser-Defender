@@ -71,15 +71,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Fire()
-    {
-            //GameObject leftLaser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
-            //GameObject rightLaser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
+    {         
+        GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
 
-            GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
-
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector3(0, laserSpeed, 0);
-            //laser.transform.parent = transform;
-            //leftLaser.transform.parent = transform;
-            //rightLaser.transform.parent = transform;
+        laser.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, laserSpeed, 0);
     }
 }
