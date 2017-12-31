@@ -29,7 +29,7 @@ public class FormationController : MonoBehaviour {
 
         // Distance between formation and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
-        Vector3 leftBoundary = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));    // Left Corner
+        Vector3 leftBoundary = Camera.main.ViewportToWorldPoint(new Vector3(0, .2f, distance));    // Left Corner
         Vector3 rightBoundary = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, distance));   // Right Corner
         xMin = leftBoundary.x + xPadding;
         xMax = rightBoundary.x - xPadding;
@@ -61,7 +61,6 @@ public class FormationController : MonoBehaviour {
             isMovingDown = false;
         }
 
-
         float rightEdgeOfFormation = transform.position.x + (0.5f * width);
         float leftEdgeOfFormation = transform.position.x - (0.5f * width);
 
@@ -84,6 +83,7 @@ public class FormationController : MonoBehaviour {
         if(AllMembersDead())
         {
             Debug.Log("Emtpy Formation");
+            transform.position = new Vector3(0, 3, 0);
             SpawnUntilFull();
         }
     }
@@ -97,7 +97,6 @@ public class FormationController : MonoBehaviour {
                 return false;
             }
         }
-
         return true;
     }
 
@@ -120,7 +119,7 @@ public class FormationController : MonoBehaviour {
         foreach (Transform child in transform)
         {
             // Quaternion is rotation
-            GameObject enemy = Instantiate(enemyPrefab, new Vector3(child.transform.position.x,4,0), Quaternion.identity) as GameObject;
+            GameObject enemy = Instantiate(enemyPrefab, new Vector3(child.transform.position.x,3,0), Quaternion.identity) as GameObject;
             // Set Enemy Spawner as the parent
             enemy.transform.parent = child;
         }
@@ -132,16 +131,14 @@ public class FormationController : MonoBehaviour {
 
         if(freePosition)
         {
-            GameObject enemy = Instantiate(enemyPrefab, new Vector3(freePosition.position.x,4,0), Quaternion.identity) as GameObject;
+            GameObject enemy = Instantiate(enemyPrefab, new Vector3(freePosition.position.x,3,0), Quaternion.identity) as GameObject;
             // Set Enemy Spawner as the parent
             enemy.transform.parent = freePosition;
         }
         if(NextFreePosition())
         {
             Invoke("SpawnUntilFull", spawnDelay);
-        }
-        
-        
+        }        
     }
 
 }
