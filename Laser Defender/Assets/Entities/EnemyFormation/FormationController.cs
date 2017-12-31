@@ -11,6 +11,7 @@ public class FormationController : MonoBehaviour {
     public float height = 5f;
     public float xPadding = 0.5f;
     public float yPadding = 0.5f;
+    public float spawnDelay = 0.5f;
 
     // Private Variables
     private bool isMovingRight = true;
@@ -24,7 +25,7 @@ public class FormationController : MonoBehaviour {
     void Start () {
 
         // Spawn Enemies in formation
-        SpawnEnemies();
+        SpawnUntilFull();
 
         // Distance between formation and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
@@ -83,7 +84,7 @@ public class FormationController : MonoBehaviour {
         if(AllMembersDead())
         {
             Debug.Log("Emtpy Formation");
-            SpawnEnemies();
+            SpawnUntilFull();
         }
     }
 
@@ -100,6 +101,19 @@ public class FormationController : MonoBehaviour {
         return true;
     }
 
+    private Transform NextFreePosition()
+    {
+        foreach (Transform childPositionGameObject in transform)
+        {
+            if (childPositionGameObject.childCount == 0)
+            {
+                return childPositionGameObject;
+            }
+        }
+
+        return null;
+    }
+
     private void SpawnEnemies()
     {
         // Spawn each enemy
@@ -111,4 +125,23 @@ public class FormationController : MonoBehaviour {
             enemy.transform.parent = child;
         }
     }
+
+    private void SpawnUntilFull()
+    {
+        Transform freePosition = NextFreePosition();
+
+        if(freePosition)
+        {
+            GameObject enemy = Instantiate(enemyPrefab, new Vector3(freePosition.position.x,4,0), Quaternion.identity) as GameObject;
+            // Set Enemy Spawner as the parent
+            enemy.transform.parent = freePosition;
+        }
+        if(NextFreePosition())
+        {
+            Invoke("SpawnUntilFull", spawnDelay);
+        }
+        
+        
+    }
+
 }
