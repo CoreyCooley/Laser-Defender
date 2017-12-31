@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     // Public Variables
     public float speed;
-    public float xPadding = 1f;
+    public float xPadding = 0.5f;
     public float yPadding = 0.5f;
 
     // Private Variables
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        speed = 15.0f;
+        speed = 10.0f;
 
         // Distance between player and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
