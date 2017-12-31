@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour {
     public float xPadding = 0.5f;
     public float yPadding = 0.5f;
     public float health = 500f;
+    public AudioClip fireSound;
 
     // Private Variables
     private float xMin = -5.0f;
@@ -90,10 +91,11 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Fire()
-    {
-        Vector3 startPosition = transform.position + new Vector3(0, 1, 0);
-        GameObject laser = Instantiate(laserPrefab, startPosition, Quaternion.identity) as GameObject;
-
+    {        
+        GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
         laser.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, laserSpeed, 0);
+
+        AudioSource.PlayClipAtPoint(fireSound, transform.position);
+        
     }
 }
