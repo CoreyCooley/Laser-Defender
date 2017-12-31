@@ -25,7 +25,7 @@ public class FormationController : MonoBehaviour {
     void Start () {
 
         // Spawn Enemies in formation
-        SpawnUntilFull();
+        SpawnEnemies();
 
         // Distance between formation and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
