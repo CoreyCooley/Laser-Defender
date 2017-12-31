@@ -15,7 +15,7 @@ Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defen
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.157 seconds
+- Completed reload, in  0.120 seconds
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
@@ -23,17 +23,17 @@ desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.385438 ms
+UnloadTime: 6.876313 ms
 New Level load: Game
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 5.543799 ms
+UnloadTime: 6.988723 ms
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 238.
-Total: 0.234666 ms (FindLiveObjects: 0.050871 ms CreateObjectMapping: 0.011897 ms MarkObjects: 0.161641 ms  DeleteObjects: 0.009846 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 237.
+Total: 0.199384 ms (FindLiveObjects: 0.030358 ms CreateObjectMapping: 0.009846 ms MarkObjects: 0.149333 ms  DeleteObjects: 0.009025 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1c84 -> priority: 1 
-  Thread -> id: 2ddc -> priority: 1 
+  Thread -> id: 1694 -> priority: 1 
+  Thread -> id: 20f8 -> priority: 1 

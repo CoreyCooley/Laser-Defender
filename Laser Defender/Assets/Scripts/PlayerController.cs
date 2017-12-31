@@ -4,31 +4,56 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
+    // Public Variables
     public float speed;
+    public float xPadding = 1f;
+    public float yPadding = 0.5f;
+
+    // Private Variables
+    private float xMin = -5.0f;
+    private float xMax = 5.0f;
+    private float yMin = -4.5f;
+    private float yMax = -2.0f;
 
 	// Use this for initialization
 	void Start () {
         speed = 15.0f;
-	}
+
+        // Distance between player and camera
+        float distance = transform.position.z - Camera.main.transform.position.z;
+        // Vector 3 has values between 0 and 1 relative to screen
+        Vector3 leftMost = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, distance));    // Left Corner
+        Vector3 rightMost = Camera.main.ViewportToWorldPoint(new Vector3(1, .4f, distance)); // Right Corner
+        xMin = leftMost.x + xPadding;
+        xMax = rightMost.x - xPadding;
+        yMin = leftMost.y + yPadding;
+        yMax = rightMost.y - yPadding;
+    }
 	
 	// Update is called once per frame
 	void Update () {
         // Move Player
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3(-speed * Time.deltaTime, 0,0);
+            //transform.position += new Vector3(-speed * Time.deltaTime, 0,0); // Old Way
+            transform.position += Vector3.left * speed * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
+            transform.position += Vector3.right * speed * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.UpArrow))
-        {                        
-            transform.position += new Vector3(0, speed * Time.deltaTime, 0);            
+        {
+            transform.position += Vector3.up * speed * Time.deltaTime;
         }
         else if (Input.GetKey(KeyCode.DownArrow))
         {
-            transform.position += new Vector3(0, -speed * Time.deltaTime, 0);            
+            transform.position += Vector3.down * speed * Time.deltaTime;
         }
+
+        // Restrict the player to the game space
+        float newX = Mathf.Clamp(transform.position.x, xMin, xMax);
+        float newY = Mathf.Clamp(transform.position.y, yMin, yMax);
+        transform.position = new Vector3(newX, newY, transform.position.z);
     }
 }
