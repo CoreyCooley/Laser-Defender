@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 45
+  controlID: 9
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 46
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 47
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -385,18 +385,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Entities/EnemyFormation
+    - Assets/Entities/Player
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Entities/EnemyFormation
+  - Assets/Entities/Player
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 43}
-    m_SelectedIDs: 28250000
-    m_LastClickedID: 9512
+    m_SelectedIDs: f6240000
+    m_LastClickedID: 9462
     m_ExpandedIDs: 00000000be2400003625000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 18a4ffff86a4ffff50a5ffff54a5ffff74a5ffff9caaffff0aabffffd4abffffd8abfffff8abffffb0f5ffff22f6ffffecf6fffff0f6ffff10f7ffffa8f9ffff1cfaffffe6faffffeafaffff0afbffffe2fbffff000000005e290000
+    m_ExpandedIDs: e2fbffff0000000078250000aa250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -598,9 +598,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0, z: 0}
+    m_Target: {x: -0.17236237, y: 0.62007356, z: 0}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0}
+    m_Value: {x: -0.17236237, y: 0.62007356, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -627,9 +627,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10.730376
+    m_Target: 22.783243
     speed: 2
-    m_Value: 10.730376
+    m_Value: 22.783243
   m_Ortho:
     m_Target: 1
     speed: 2
