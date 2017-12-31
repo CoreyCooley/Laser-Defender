@@ -14,6 +14,7 @@ public class EnemySpawner : MonoBehaviour {
 
     // Private Variables
     private bool isMovingRight = true;
+    private bool isMovingDown = false;
     private float xMin = -5.0f;
     private float xMax = 5.0f;
     private float yMin = -4.5f;
@@ -53,23 +54,34 @@ public class EnemySpawner : MonoBehaviour {
         if (isMovingRight)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
-        }
+        }      
         else
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
 
+        if(isMovingDown)
+        {
+            transform.position += Vector3.down * flySpeed * Time.deltaTime;
+            isMovingDown = false;
+        }
+
+
         float rightEdgeOfFormation = transform.position.x + (0.5f * width);
         float leftEdgeOfFormation = transform.position.x - (0.5f * width);
 
-        if (leftEdgeOfFormation < xMin || rightEdgeOfFormation > xMax)
+        if (leftEdgeOfFormation < xMin)
         {
-            isMovingRight = !isMovingRight;
-            transform.position += Vector3.down * flySpeed * Time.deltaTime;
+            isMovingRight = true;
+            isMovingDown = true;
+        }
+        else if(rightEdgeOfFormation > xMax)
+        {
+            isMovingRight = false;
+            isMovingDown = true;
         }
         
         // Restrict the formation to the game space
-        //float newX = Mathf.Clamp(transform.position.x, xMin, xMax);
         float newY = Mathf.Clamp(transform.position.y, yMin, yMax);
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
