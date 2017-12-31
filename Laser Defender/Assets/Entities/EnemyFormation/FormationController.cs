@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour {
+public class FormationController : MonoBehaviour {
 
     public GameObject enemyPrefab;
     public float speed = 5f;
@@ -22,15 +22,9 @@ public class EnemySpawner : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        
-        // Spawn each enemy
-        foreach( Transform child in transform)
-        {
-            // Quaternion is rotation
-            GameObject enemy = Instantiate(enemyPrefab, child.transform.position, Quaternion.identity) as GameObject;
-            // Set Enemy Spawner as the parent
-            enemy.transform.parent = child;
-        }
+
+        // Spawn Enemies in formation
+        SpawnEnemies();
 
         // Distance between formation and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
@@ -84,5 +78,37 @@ public class EnemySpawner : MonoBehaviour {
         // Restrict the formation to the game space
         float newY = Mathf.Clamp(transform.position.y, yMin, yMax);
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+
+        // Check if formation is empty
+        if(AllMembersDead())
+        {
+            Debug.Log("Emtpy Formation");
+            SpawnEnemies();
+        }
+    }
+
+    private bool AllMembersDead()
+    {
+        foreach(Transform childPositionGameObject in transform)
+        {
+            if(childPositionGameObject.childCount > 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private void SpawnEnemies()
+    {
+        // Spawn each enemy
+        foreach (Transform child in transform)
+        {
+            // Quaternion is rotation
+            GameObject enemy = Instantiate(enemyPrefab, new Vector3(child.transform.position.x,4,0), Quaternion.identity) as GameObject;
+            // Set Enemy Spawner as the parent
+            enemy.transform.parent = child;
+        }
     }
 }

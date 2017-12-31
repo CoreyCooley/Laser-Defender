@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     // Public Variables
     public GameObject laserPrefab;
     public float speed;
-    public float laserSpeed = 0.5f;
+    public float laserSpeed = 5f;
     public float firingRate = 0.2f;
     public float xPadding = 0.5f;
     public float yPadding = 0.5f;

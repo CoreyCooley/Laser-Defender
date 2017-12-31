@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour {
+public class EnemyController : MonoBehaviour {
 
     public float health = 250f;
     public GameObject laserPrefab;
