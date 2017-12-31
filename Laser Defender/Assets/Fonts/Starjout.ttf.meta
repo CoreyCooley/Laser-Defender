@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 3ad14374b35016d4a99998c5bcf19c0c
+timeCreated: 1514745922
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Jedi Outline
+  fontNames:
+  - Star Jedi Outline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

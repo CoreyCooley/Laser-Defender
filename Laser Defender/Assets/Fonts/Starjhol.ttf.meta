@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bb2451b57cd8b794ba52a0c302483713
+timeCreated: 1514745914
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Star Jedi Hollow
+  fontNames:
+  - Star Jedi Hollow
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
