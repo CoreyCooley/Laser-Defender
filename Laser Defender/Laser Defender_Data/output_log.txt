@@ -15,7 +15,7 @@ Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defen
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.030 seconds
+- Completed reload, in  0.089 seconds
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.dll (this message is harmless)
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
@@ -23,41 +23,55 @@ desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.422360 ms
+UnloadTime: 2.370457 ms
 New Level load: Game
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 7.066262 ms
+UnloadTime: 4.745428 ms
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 310.
-Total: 0.241230 ms (FindLiveObjects: 0.026256 ms CreateObjectMapping: 0.038153 ms MarkObjects: 0.165333 ms  DeleteObjects: 0.010666 ms)
-
-Emtpy Formation
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 347.
+Total: 0.317537 ms (FindLiveObjects: 0.038153 ms CreateObjectMapping: 0.020102 ms MarkObjects: 0.246153 ms  DeleteObjects: 0.011897 ms)
 
 Emtpy Formation
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Emtpy Formation
+New Level load: Win Screen
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Emtpy Formation
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.030152 ms
+
+Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 271.
+Total: 0.440614 ms (FindLiveObjects: 0.032410 ms CreateObjectMapping: 0.018051 ms MarkObjects: 0.195281 ms  DeleteObjects: 0.192820 ms)
+
+New Level load: Start Menu
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Emtpy Formation
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.994049 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 278.
+Total: 0.441024 ms (FindLiveObjects: 0.034871 ms CreateObjectMapping: 0.029538 ms MarkObjects: 0.365948 ms  DeleteObjects: 0.009435 ms)
+
+Duplicate music player self-destructing!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Emtpy Formation
+New Level load: Game
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.612511 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 347.
+Total: 0.416409 ms (FindLiveObjects: 0.030769 ms CreateObjectMapping: 0.024205 ms MarkObjects: 0.329435 ms  DeleteObjects: 0.031179 ms)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2590 -> priority: 1 
-  Thread -> id: 12f0 -> priority: 1 
+  Thread -> id: 1a10 -> priority: 1 
+  Thread -> id: 9d0 -> priority: 1 

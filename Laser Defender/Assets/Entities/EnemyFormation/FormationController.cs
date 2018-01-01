@@ -29,7 +29,7 @@ public class FormationController : MonoBehaviour {
 
         // Distance between formation and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
-        Vector3 leftBoundary = Camera.main.ViewportToWorldPoint(new Vector3(0, .2f, distance));    // Left Corner
+        Vector3 leftBoundary = Camera.main.ViewportToWorldPoint(new Vector3(0, .3f, distance));    // Left Corner
         Vector3 rightBoundary = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, distance));   // Right Corner
         xMin = leftBoundary.x + xPadding;
         xMax = rightBoundary.x - xPadding;

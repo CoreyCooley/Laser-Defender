@@ -82,8 +82,7 @@ public class PlayerController : MonoBehaviour {
             laser.Hit();
             if (health <= 0)
             {
-                AudioSource.PlayClipAtPoint(deathSound, transform.position);
-                Destroy(gameObject);
+                Die();
             }
         }
         else
@@ -97,7 +96,15 @@ public class PlayerController : MonoBehaviour {
         GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
         laser.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, laserSpeed, 0);
 
-        AudioSource.PlayClipAtPoint(fireSound, transform.position);
-        
+        AudioSource.PlayClipAtPoint(fireSound, transform.position);        
+    }
+
+    void Die()
+    {
+        AudioSource.PlayClipAtPoint(deathSound, transform.position);
+        Destroy(gameObject);
+
+        LevelManager levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        levelManager.LoadLevel("Win Screen");
     }
 }
