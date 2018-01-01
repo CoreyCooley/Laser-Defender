@@ -23,8 +23,8 @@ public class PlayerController : MonoBehaviour {
     private float yMax = -2.0f;
     private const string FIRE_METHOD = "Fire";
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         speed = 10.0f;
         currentHealth = maxHealth;
 
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour {
         else
         {
             Debug.Log("Hit by a unknown");
-        }
+        }        
 
         if (currentHealth <= 0)
         {
