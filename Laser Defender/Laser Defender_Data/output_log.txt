@@ -15,24 +15,58 @@ Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defen
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.089 seconds
+- Completed reload, in  0.024 seconds
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender\Laser Defender_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on MusicPlayer
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 376)
+
 desktop: 2736x1824 60Hz; virtual: 2736x1824 at 0,0
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.370457 ms
+UnloadTime: 1.140921 ms
 New Level load: Game
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.745428 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.211478 ms
+Music Player: loaded level 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 347.
-Total: 0.317537 ms (FindLiveObjects: 0.038153 ms CreateObjectMapping: 0.020102 ms MarkObjects: 0.246153 ms  DeleteObjects: 0.011897 ms)
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 349.
+Total: 0.310153 ms (FindLiveObjects: 0.054153 ms CreateObjectMapping: 0.015999 ms MarkObjects: 0.227281 ms  DeleteObjects: 0.012307 ms)
+
+Emtpy Formation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Emtpy Formation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Emtpy Formation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Emtpy Formation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Emtpy Formation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Emtpy Formation
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Emtpy Formation
  
@@ -43,35 +77,46 @@ New Level load: Win Screen
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.030152 ms
+UnloadTime: 0.700306 ms
+Music Player: loaded level 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 41 unused Assets to reduce memory usage. Loaded Objects now: 271.
-Total: 0.440614 ms (FindLiveObjects: 0.032410 ms CreateObjectMapping: 0.018051 ms MarkObjects: 0.195281 ms  DeleteObjects: 0.192820 ms)
+
+Unloading 38 unused Assets to reduce memory usage. Loaded Objects now: 284.
+Total: 0.514870 ms (FindLiveObjects: 0.044307 ms CreateObjectMapping: 0.021333 ms MarkObjects: 0.308512 ms  DeleteObjects: 0.139897 ms)
 
 New Level load: Start Menu
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.994049 ms
+UnloadTime: 1.282049 ms
+Music Player: loaded level 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 278.
-Total: 0.441024 ms (FindLiveObjects: 0.034871 ms CreateObjectMapping: 0.029538 ms MarkObjects: 0.365948 ms  DeleteObjects: 0.009435 ms)
+Music Player: loaded level 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at MusicPlayer.OnLevelWasLoaded (Int32 level) [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 291.
+Total: 0.326153 ms (FindLiveObjects: 0.024615 ms CreateObjectMapping: 0.020102 ms MarkObjects: 0.275281 ms  DeleteObjects: 0.004923 ms)
 
 Duplicate music player self-destructing!
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-New Level load: Game
+Quit requested
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.612511 ms
-
-Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 347.
-Total: 0.416409 ms (FindLiveObjects: 0.030769 ms CreateObjectMapping: 0.024205 ms MarkObjects: 0.329435 ms  DeleteObjects: 0.031179 ms)
-
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1a10 -> priority: 1 
-  Thread -> id: 9d0 -> priority: 1 
+  Thread -> id: 2004 -> priority: 1 
+  Thread -> id: a00 -> priority: 1 
