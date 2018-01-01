@@ -20,6 +20,7 @@ public class MusicPlayer : MonoBehaviour {
 
             music = GetComponent<AudioSource>();
             music.clip = startClip;
+            music.volume = .01f;
             music.loop = true;
             music.Play();
         }		
@@ -30,9 +31,13 @@ public class MusicPlayer : MonoBehaviour {
         Debug.Log("Music Player: loaded level " + level);
         music = GetComponent<AudioSource>();
         music.Stop();
+        music.volume = .1f;
 
         if (level == 0)
+        {
             music.clip = startClip;
+            music.volume = .01f;
+        }
         else if (level == 1)
             music.clip = gameClip;
         else
