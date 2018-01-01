@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour {
     public float firingRate = 0.2f;
     public float xPadding = 0.5f;
     public float yPadding = 0.5f;
-    public float health = 500f;
+    public int currentHealth;
+    public int maxHealth = 5;
     public AudioClip fireSound;
     public AudioClip deathSound;
 
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         speed = 10.0f;
+        currentHealth = maxHealth;
 
         // Distance between player and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
@@ -80,12 +82,12 @@ public class PlayerController : MonoBehaviour {
 
         if (laser)
         {
-            health -= laser.GetDamage();
+            currentHealth -= laser.GetDamage();
             laser.Hit();
         }
         else if (enemy)
         {
-            health -= enemy.GetImpactDamage();
+            currentHealth -= enemy.GetImpactDamage();
             enemy.Impact();
         }
         else
@@ -93,7 +95,7 @@ public class PlayerController : MonoBehaviour {
             Debug.Log("Hit by a unknown");
         }
 
-        if (health <= 0)
+        if (currentHealth <= 0)
         {
             Die();
         }

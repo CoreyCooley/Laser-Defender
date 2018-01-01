@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -435,18 +435,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Entities/Player
+    - Assets/Entities/Enemy
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Entities/Player
+  - Assets/Entities/Enemy
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\SurfacePro\Desktop\GitHub\Laser-Defender\Laser Defender
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 50}
-    m_SelectedIDs: 04250000
-    m_LastClickedID: 9476
+    scrollPos: {x: 0, y: 70}
+    m_SelectedIDs: 12250000
+    m_LastClickedID: 9490
     m_ExpandedIDs: 00000000c82400000c2500008025000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -503,21 +503,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 
+    m_ExpandedInstanceIDs: ec320000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Hud
+      m_OriginalName: Hud
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14160
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -591,23 +591,23 @@ MonoBehaviour:
     height: 482
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 0085ffff0485ffff0885ffff0c85ffff1c85ffff2a85ffff3285ffff3485ffff88f6ffff12f7ffffd0f7ffff5ef8ffff12f9ffffa4f9ffff2efaffffecfaffffe0fbffff00000000242b0000
+    m_SelectedIDs: 42320000
+    m_LastClickedID: 12866
+    m_ExpandedIDs: c44efeff7a75feff0276feffc076feff5277feff1078feff9878feffe0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: EnemyFormation
+      m_OriginalName: EnemyFormation
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 12860
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 2}
     m_SearchString: 
@@ -643,7 +643,7 @@ MonoBehaviour:
     width: 677
     height: 482
   m_SceneLighting: 1
-  lastFramingTime: 1542.0802382273014
+  lastFramingTime: 4679.067811170771
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0

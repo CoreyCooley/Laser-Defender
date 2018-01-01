@@ -28,6 +28,7 @@ public class MusicPlayer : MonoBehaviour {
     private void OnLevelWasLoaded(int level)
     {
         Debug.Log("Music Player: loaded level " + level);
+        music = GetComponent<AudioSource>();
         music.Stop();
 
         if (level == 0)

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour {
 
-    public float damage = 100f;
+    public int damage = 1;
 
     public void Hit()
     {
         Destroy(gameObject);
     }
 
-    public float GetDamage()
+    public int GetDamage()
     {
         return damage;
     }

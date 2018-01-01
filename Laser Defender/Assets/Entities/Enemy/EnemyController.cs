@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    public float health = 250f;
+    public float health = 2f;
     public GameObject laserPrefab;
     public float laserSpeed = 5f;
     public float shotsPerSecond = 0.5f;
     public int scoreValue = 25;
-    public int impactDamage = 150;
+    public int impactDamage = 1;
     public AudioClip fireSound;
     public AudioClip deathSound;
 
