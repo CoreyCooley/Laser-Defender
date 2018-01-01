@@ -9,10 +9,12 @@ public class EnemyController : MonoBehaviour {
     public float laserSpeed = 5f;
     public float shotsPerSecond = 0.5f;
     public int scoreValue = 25;
+    public int impactDamage = 150;
     public AudioClip fireSound;
     public AudioClip deathSound;
 
     private ScoreKeeper scoreKeeper;
+
 
     private void Start()
     {
@@ -49,6 +51,16 @@ public class EnemyController : MonoBehaviour {
         laser.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, -laserSpeed, 0);
 
         AudioSource.PlayClipAtPoint(fireSound, transform.position);
+    }
+
+    public void Impact()
+    {
+        Destroy(gameObject);
+    }
+
+    public int GetImpactDamage()
+    {
+        return impactDamage;
     }
 
     void Die()

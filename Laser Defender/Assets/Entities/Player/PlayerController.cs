@@ -76,18 +76,26 @@ public class PlayerController : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Laser laser = collision.gameObject.GetComponent<Laser>();
+        EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+
         if (laser)
         {
             health -= laser.GetDamage();
             laser.Hit();
-            if (health <= 0)
-            {
-                Die();
-            }
+        }
+        else if (enemy)
+        {
+            health -= enemy.GetImpactDamage();
+            enemy.Impact();
         }
         else
         {
             Debug.Log("Hit by a unknown");
+        }
+
+        if (health <= 0)
+        {
+            Die();
         }
     }
 

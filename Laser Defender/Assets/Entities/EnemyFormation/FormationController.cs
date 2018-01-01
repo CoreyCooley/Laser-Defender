@@ -119,7 +119,8 @@ public class FormationController : MonoBehaviour {
         foreach (Transform child in transform)
         {
             // Quaternion is rotation
-            GameObject enemy = Instantiate(enemyPrefab, new Vector3(child.transform.position.x,3,0), Quaternion.identity) as GameObject;
+            //GameObject enemy = Instantiate(enemyPrefab, new Vector3(child.transform.position.x,3,0), Quaternion.identity) as GameObject;
+            GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity) as GameObject;
             // Set Enemy Spawner as the parent
             enemy.transform.parent = child;
         }
