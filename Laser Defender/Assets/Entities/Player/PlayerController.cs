@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
     public int maxHealth = 5;
     public AudioClip fireSound;
     public AudioClip deathSound;
+    public AudioClip hitSound;
 
     // Private Variables
     private float xMin = -5.0f;
@@ -22,11 +23,14 @@ public class PlayerController : MonoBehaviour {
     private float yMin = -4.5f;
     private float yMax = -2.0f;
     private const string FIRE_METHOD = "Fire";
+    private SpriteRenderer spriteRenderer;
 
     // Use this for initialization
     void Start () {
         speed = 10.0f;
         currentHealth = maxHealth;
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = ShipSelector.ShipSprite;
 
         // Distance between player and camera
         float distance = transform.position.z - Camera.main.transform.position.z;
@@ -83,11 +87,13 @@ public class PlayerController : MonoBehaviour {
         if (laser)
         {
             currentHealth -= laser.GetDamage();
+            AudioSource.PlayClipAtPoint(hitSound, transform.position);
             laser.Hit();
         }
         else if (enemy)
         {
             currentHealth -= enemy.GetImpactDamage();
+            AudioSource.PlayClipAtPoint(hitSound, transform.position);
             enemy.Impact();
         }
         else
@@ -115,6 +121,6 @@ public class PlayerController : MonoBehaviour {
         Destroy(gameObject);
 
         LevelManager levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        levelManager.LoadLevel("Win Screen");
+        levelManager.LoadLevel("Game Over");
     }
 }
