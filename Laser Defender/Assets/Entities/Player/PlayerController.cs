@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
     // Public Variables
-    public GameObject laserPrefab;
+    public GameObject laserType;
     public float speed;
     public float laserSpeed = 5f;
     public float firingRate = 0.2f;
@@ -109,7 +109,7 @@ public class PlayerController : MonoBehaviour {
 
     void Fire()
     {        
-        GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
+        GameObject laser = Instantiate(laserType, transform.position, Quaternion.identity) as GameObject;
         laser.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector3(0, laserSpeed, 0);
 
         AudioSource.PlayClipAtPoint(fireSound, transform.position);        
