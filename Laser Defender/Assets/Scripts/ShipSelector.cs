@@ -23,9 +23,9 @@ public class ShipSelector : MonoBehaviour {
 	void Update () {
         ShipSprite = ShipSprites[selection];
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
             PreviousShip();
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
             NextShip();
     }
 
