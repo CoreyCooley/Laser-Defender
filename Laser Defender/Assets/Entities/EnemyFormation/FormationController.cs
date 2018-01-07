@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class FormationController : MonoBehaviour {
 
-    public GameObject enemyPrefab;
+    public GameObject[] enemyPrefab;
+    public GameObject enemyBoss;
     public float speed = 5f;
     public float flySpeed = 10f;
     public float width = 10f;
@@ -16,6 +17,8 @@ public class FormationController : MonoBehaviour {
     // Private Variables
     private bool isMovingRight = true;
     private bool isMovingDown = false;
+    private bool isLevelOver = false;
+    private bool hasSpawnedBoss = false;
     private float xMin = -5.0f;
     private float xMax = 5.0f;
     private float yMin = -4.5f;
@@ -45,6 +48,12 @@ public class FormationController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+        
+        if(ScoreKeeper.score > 300 && !hasSpawnedBoss)
+        {
+            //SpawnBoss();
+        }
+
         // Formation moving right
         if (isMovingRight)
         {
@@ -80,7 +89,7 @@ public class FormationController : MonoBehaviour {
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
 
         // Check if formation is empty
-        if(AllMembersDead())
+        if(AllMembersDead() && !hasSpawnedBoss)
         {
             Debug.Log("Emtpy Formation");
             transform.position = new Vector3(0, 3, 0);
@@ -118,12 +127,30 @@ public class FormationController : MonoBehaviour {
         // Spawn each enemy
         foreach (Transform child in transform)
         {
+            int rand = Random.Range(0, enemyPrefab.Length);
             // Quaternion is rotation
             //GameObject enemy = Instantiate(enemyPrefab, new Vector3(child.transform.position.x,3,0), Quaternion.identity) as GameObject;
-            GameObject enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity) as GameObject;
+            GameObject enemy = Instantiate(enemyPrefab[0], transform.position, Quaternion.identity) as GameObject;
             // Set Enemy Spawner as the parent
             enemy.transform.parent = child;
         }
+    }
+
+    public void SpawnBoss()
+    {        
+        transform.position = new Vector3(0, 3, 0);
+        Debug.Log("Position Count is " + transform.childCount);
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            Transform pos = transform.GetChild(i);
+            if (pos.childCount > 0)
+            {
+                Destroy(pos.GetChild(0).GetComponent<EnemyController>());
+            }
+        }
+        GameObject enemy = Instantiate(enemyBoss, transform.position, Quaternion.identity) as GameObject;
+        enemy.transform.parent = transform.GetChild(0);
+        hasSpawnedBoss = true;
     }
 
     private void SpawnUntilFull()
@@ -132,7 +159,8 @@ public class FormationController : MonoBehaviour {
 
         if(freePosition)
         {
-            GameObject enemy = Instantiate(enemyPrefab, new Vector3(freePosition.position.x,3,0), Quaternion.identity) as GameObject;
+            int rand = Random.Range(0, enemyPrefab.Length);
+            GameObject enemy = Instantiate(enemyPrefab[rand], new Vector3(freePosition.position.x,3,0), Quaternion.identity) as GameObject;
             // Set Enemy Spawner as the parent
             enemy.transform.parent = freePosition;
         }
