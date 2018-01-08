@@ -42,6 +42,10 @@ public class PowerUpController : MonoBehaviour {
         {
             player.firingRate = player.firingRate / powerUpFiringRate;
         }
+        else
+        {
+            player.firingRate = 0.05f;
+        }
         if (player.currentHealth < 5)
         {
             player.currentHealth += powerUpHealth;

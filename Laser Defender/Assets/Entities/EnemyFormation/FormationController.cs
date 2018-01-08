@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FormationController : MonoBehaviour {
 
@@ -13,6 +14,7 @@ public class FormationController : MonoBehaviour {
     public float xPadding = 0.5f;
     public float yPadding = 0.5f;
     public float spawnDelay = 0.5f;
+    public int   bossSpawn = 10000;
 
     // Private Variables
     private bool isMovingRight = true;
@@ -49,9 +51,13 @@ public class FormationController : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         
-        if(ScoreKeeper.score > 300 && !hasSpawnedBoss)
+        if(ScoreKeeper.score > bossSpawn && !hasSpawnedBoss)
         {
-            //SpawnBoss();
+            SpawnBoss();
+        }
+        if(hasSpawnedBoss && AllMembersDead())
+        {
+            SceneManager.LoadScene("Level 2");
         }
 
         // Formation moving right
@@ -137,20 +143,19 @@ public class FormationController : MonoBehaviour {
     }
 
     public void SpawnBoss()
-    {        
+    {
+        hasSpawnedBoss = true;
         transform.position = new Vector3(0, 3, 0);
-        Debug.Log("Position Count is " + transform.childCount);
-        for(int i = 0; i < transform.childCount; i++)
+
+        var children = new List<GameObject>();
+        foreach (Transform child in transform) children.Add(child.gameObject);
+
+        for (int i = 1; i < children.Count; i++)
         {
-            Transform pos = transform.GetChild(i);
-            if (pos.childCount > 0)
-            {
-                Destroy(pos.GetChild(0).GetComponent<EnemyController>());
-            }
+            Destroy(children[i]);
         }
         GameObject enemy = Instantiate(enemyBoss, transform.position, Quaternion.identity) as GameObject;
-        enemy.transform.parent = transform.GetChild(0);
-        hasSpawnedBoss = true;
+        enemy.transform.parent = transform.GetChild(0);        
     }
 
     private void SpawnUntilFull()
